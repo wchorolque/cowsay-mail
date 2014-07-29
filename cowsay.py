@@ -18,7 +18,7 @@ mail_pass = os.environ.get('MAIL_PASS')
 mail_to = os.environ.get('MAIL_TO')
 
 if True == os.path.exists('/tmp/mail_log.txt'):
-    os.system('rm /tmp/mail_log.txt')
+    os.remove('/tmp/mail_log.txt')
 
 os.system('fortune computers | cowsay -f koala | tee /tmp/mail_log.txt')
 
